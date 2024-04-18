@@ -32,8 +32,9 @@ app.get("/", (req, res) => {
   
 } )
 app.use('/auth', authRoute)
-app.use('/device', deviceRoute)
-
+app.use('/device', deviceRoute yeah)
+abcdxyz
+abcdxyz
 app.listen(4500, () => {
   console.log('server is running ...')
 })
