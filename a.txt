@@ -1,4 +1,4 @@
-const { Device, LogHistory } = require('./model')
+const { Device, LogHistory, SieuNhan } = require('./model')
 // const dotenv = require('dotenv')
 // dotenv.config()
 const axios = require('axios');
