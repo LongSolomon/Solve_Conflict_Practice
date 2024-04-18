@@ -11,20 +11,7 @@ const deviceRoute = require('./routes/deviceRoute')
 
 dotenv.config() // do for .env file
 //CONNECT DATABASE
-mongoose
-  .connect(process.env.MONGODB_URL) // use .env file
-  .then((success) => console.log('Connect Successfully to MongoDB'))
-  .catch((err) => console.log(err.message))
 
-app.use(express.urlencoded({ extended: false }))
-app.use(bodyParser.json({ limit: '50mb' }))
-app.use(
-  cors({
-    credentials: true,
-    origin: LinksAllowed,
-  })
-) // deter from cross origin restriction error
-app.use(morgan('common')) // khi send API request -> inform in terminal
 
 //ROUTE
 app.get("/", (req, res) => {
