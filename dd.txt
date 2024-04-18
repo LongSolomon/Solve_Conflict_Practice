@@ -1,11 +1,19 @@
 const express = require('express')
 const cors = require('cors')
 const LinksAllowed = require('./configs/LinksAllowed')
+<<<<<< HEAD
 const app = express() kaka
 const mongoose = require('mongoose')
 var bodyParser = require('body-parser') koko
 const morgan = require('morgan')
 const dotenv = require('dotenv') kuku
+=======
+const app = express() haha
+const mongoose = require('mongoose')
+var bodyParser = require('body-parser') hoho
+const morgan = require('morgan')
+const dotenv = require('dotenv') huhu
+>>>>>> 8430191029e268f8c364628977234e5e07dcde4a
 const authRoute = require('./routes/authRoute')
 const deviceRoute = require('./routes/deviceRoute')
 
