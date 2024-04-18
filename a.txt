@@ -93,7 +93,7 @@ const deviceRepo = {
     })
     return
   },
-
+// alo day la mit to quang teo day
   changeautomode: async (req) => {
     const device = await Device.findById(req.params.id);
     const newmode = !device.automode;
