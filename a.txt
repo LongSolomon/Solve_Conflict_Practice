@@ -10,7 +10,7 @@ const deviceRepo = {
     return savedDevice
   },
 
-  //GET A DEVICE
+  //GET A DEVICE haha
   finditbyIDrepo: async (id) => {
     const device = await Device.findById(id) // find a device
     return device
