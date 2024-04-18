@@ -5,21 +5,15 @@ const axios = require('axios');
 const deviceRepo = {
   // ADD 1 DEVICE
   addadevice: async (req) => {
-
-    const newDevice1 = new Device(req.body);
-
+    const newDevice = new Device(req.body);
     const savedDevice = await newDevice.save();
     return savedDevice
   },
 
   //GET A DEVICE
-
   finditbyIDrepo: async (id) => {
-
-    const device2 = await Device.findById(id) // find a device
-
+    const device = await Device.findById(id) // find a device
     return device
-    // device 2
   },
 
   getalldevicesrepo: async (id) => {
@@ -87,7 +81,6 @@ const deviceRepo = {
 
     return
   },
-
   //CHANGE STATUS
   changestatus: async (req) => {
     const device = await Device.findById(req.params.id);
@@ -99,7 +92,6 @@ const deviceRepo = {
     })
     return
   },
-// alo day la mit to quang teo day
 
   changeautomode: async (req) => {
     const device = await Device.findById(req.params.id);
@@ -120,7 +112,6 @@ const deviceRepo = {
         status: newStatus
       }
     })
-    // chao ban minh dung day tu chieu
       try{
         const log = new LogHistory({ 
         device_id: device._id ,
@@ -206,4 +197,3 @@ const deviceRepo = {
   },
 }
 module.exports = deviceRepo
-//haha
