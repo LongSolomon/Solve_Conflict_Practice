@@ -11,6 +11,8 @@ const deviceRepo = {
   },
 
   //GET A DEVICE haha
+
+  // he lo he lo
   finditbyIDrepo: async (id) => {
     const device1 = await Device.findById(id) // find a device
 
