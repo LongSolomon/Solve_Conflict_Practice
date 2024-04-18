@@ -10,12 +10,10 @@ const deviceRepo = {
     return savedDevice
   },
 
-  //GET A DEVICE haha
+  //GET A DEVICE
   finditbyIDrepo: async (id) => {
-    const device1 = await Device.findById(id) // find a device
-
-    return device1
-
+    const device = await Device.findById(id) // find a device
+    return device
   },
 
   getalldevicesrepo: async (id) => {
@@ -39,8 +37,7 @@ const deviceRepo = {
     })
     const username = 'amopdz';
     if (device.type == 0) {
-
-      feedKey2 = 'led';
+      feedKey = 'led';
       if (newStatus) { data = '1' }
       else { data = '0' }
       apiUrl = `https://io.adafruit.com/api/v2/${username}/feeds/${feedKey}/data`;
@@ -96,6 +93,16 @@ const deviceRepo = {
     return
   },
 
+  changeautomode: async (req) => {
+    const device = await Device.findById(req.params.id);
+    const newmode = !device.automode;
+    await device.updateOne({
+      $set: {
+        automode: newmode
+      }
+    })
+    return
+  },
 
   Upcerepo: async (req) => {
     const device = await Device.findById(req.params.id);
@@ -142,7 +149,6 @@ const deviceRepo = {
       }
       
     }
-    // xin chao cac ban
     else if (device.type == 1) {
       feedKey = 'fan';
       if (newStatus) { data = '80' }
