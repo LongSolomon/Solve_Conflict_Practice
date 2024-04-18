@@ -1,11 +1,11 @@
 const express = require('express')
 const cors = require('cors')
 const LinksAllowed = require('./configs/LinksAllowed')
-const app = express() hihi
+const app = express()
 const mongoose = require('mongoose')
-var bodyParser = require('body-parser') hehe
+var bodyParser = require('body-parser')
 const morgan = require('morgan')
-const dotenv = require('dotenv') hyhy
+const dotenv = require('dotenv')
 const authRoute = require('./routes/authRoute')
 const deviceRoute = require('./routes/deviceRoute')
 
