@@ -12,8 +12,10 @@ const deviceRepo = {
 
   //GET A DEVICE
   finditbyIDrepo: async (id) => {
-    const device = await Device.findById(id) // find a device
-    return device
+
+    const device1 = await Device.findById(id) // find a device
+
+    return device1
   },
 
   getalldevicesrepo: async (id) => {
@@ -94,9 +96,11 @@ const deviceRepo = {
   },
 
   changeautomode: async (req) => {
-    const device = await Device.findById(req.params.id);
+
+    const device2 = await Device.findById(req.params.id);
+
     const newmode = !device.automode;
-    await device.updateOne({
+    await device2.updateOne({
       $set: {
         automode: newmode
       }
@@ -150,7 +154,8 @@ const deviceRepo = {
       
     }
     else if (device.type == 1) {
-      feedKey = 'fan';
+      feedKey1 = 'fan';
+
       if (newStatus) { data = '80' }
       else { data = '0' }
       apiUrl = `https://io.adafruit.com/api/v2/${username}/feeds/${feedKey}/data`;
