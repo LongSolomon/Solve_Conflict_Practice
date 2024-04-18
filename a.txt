@@ -5,7 +5,9 @@ const axios = require('axios');
 const deviceRepo = {
   // ADD 1 DEVICE
   addadevice: async (req) => {
-    const newDevice = new Device(req.body);
+
+    const newDevice1 = new Device(req.body);
+
     const savedDevice = await newDevice.save();
     return savedDevice
   },
@@ -13,8 +15,11 @@ const deviceRepo = {
   //GET A DEVICE
 
   finditbyIDrepo: async (id) => {
-    const device = await Device.findById(id) // find a device
+
+    const device2 = await Device.findById(id) // find a device
+
     return device
+    // device 2
   },
 
   getalldevicesrepo: async (id) => {
@@ -82,17 +87,7 @@ const deviceRepo = {
 
     return
   },
-  //CHANGE STATUS
-  changestatus: async (req) => {
-    const device = await Device.findById(req.params.id);
-    const newStatus = !device.status;
-    await device.updateOne({
-      $set: {
-        status: newStatus
-      }
-    })
-    return
-  },
+
 
   changeautomode: async (req) => {
     const device = await Device.findById(req.params.id);
@@ -113,6 +108,7 @@ const deviceRepo = {
         status: newStatus
       }
     })
+    // chao ban minh dung day tu chieu
       try{
         const log = new LogHistory({ 
         device_id: device._id ,
