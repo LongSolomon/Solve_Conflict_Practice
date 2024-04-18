@@ -1,4 +1,4 @@
-const { Device, LogHistory, SieuNhanGao } = require('./model')
+const { Device, LogHistory } = require('./model')
 // const dotenv = require('dotenv')
 // dotenv.config()
 const axios = require('axios');
@@ -18,7 +18,7 @@ const deviceRepo = {
 
   getalldevicesrepo: async (id) => {
     const alldevices = await Device.find({
-      ownerID7: id,
+      ownerID: id,
     }) // find a device
     return alldevices
   },
