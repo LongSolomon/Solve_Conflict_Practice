@@ -88,6 +88,18 @@ const deviceRepo = {
     return
   },
 
+  //CHANGE STATUS
+  changestatus: async (req) => {
+    const device = await Device.findById(req.params.id);
+    const newStatus = !device.status;
+    await device.updateOne({
+      $set: {
+        status: newStatus
+      }
+    })
+    return
+  },
+// alo day la mit to quang teo day
 
   changeautomode: async (req) => {
     const device = await Device.findById(req.params.id);
