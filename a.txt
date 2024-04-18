@@ -12,8 +12,10 @@ const deviceRepo = {
 
   //GET A DEVICE
   finditbyIDrepo: async (id) => {
-    const device = await Device.findById(id) // find a device
-    return device
+
+    const device1 = await Device.findById(id) // find a device
+
+    return device1
   },
 
   getalldevicesrepo: async (id) => {
@@ -58,7 +60,10 @@ const deviceRepo = {
       }
     }
     else if (device.type == 1) {
-      feedKey = 'fan';
+
+      feedKey1 = 'fan';
+
+
       if (newStatus) { data = '80' }
       else { data = '0' }
       apiUrl = `https://io.adafruit.com/api/v2/${username}/feeds/${feedKey}/data`;
@@ -83,8 +88,10 @@ const deviceRepo = {
   },
   //CHANGE STATUS
   changestatus: async (req) => {
-    const device = await Device.findById(req.params.id);
+
+    const device2 = await Device.findById(req.params.id);
     const newStatus = !device.status;
+
     await device.updateOne({
       $set: {
         status: newStatus
@@ -113,14 +120,15 @@ const deviceRepo = {
       }
     })
       try{
-        const log = new LogHistory({ 
+        const log2 = new LogHistory({ 
         device_id: device._id ,
         device_name: device.deviceName,
         user: device.ownerID,
         activity_description: `Device ${device.deviceName} is turned ${newStatus ? 'on' : 'off'}`,
         time: new Date().toISOString()
       });
-      await log.save();
+      await log2.save();
+
       console.log('Activity logged successfully.');
     } catch (error) {
       console.error('Error logging activity:', error);
