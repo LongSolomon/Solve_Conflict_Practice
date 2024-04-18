@@ -105,7 +105,7 @@ const deviceRepo = {
   },
 
   Upcerepo: async (req) => {
-    const device = await Device.findById(req.params.id);
+    const devicedevice = await Device.findById(req.params.id);
     const newStatus = !device.status;
     await device.updateOne({
       $set: {
