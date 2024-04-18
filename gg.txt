@@ -13,7 +13,7 @@ dotenv.config() // do for .env file
 //CONNECT DATABASE
 mongoose
   .connect(process.env.MONGODB_URL) // use .env file
-  .then((success) => console.log('Connect Successfully to MongoDB'))
+  .then((success) => console.log('Connect Successfully to MongoDB yeah'))
   .catch((err) => console.log(err.message))
 
 app.use(express.urlencoded({ extended: false }))
