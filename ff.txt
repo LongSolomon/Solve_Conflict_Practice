@@ -11,10 +11,14 @@ const deviceRoute = require('./routes/deviceRoute')
 
 dotenv.config() // do for .env file
 //CONNECT DATABASE
+<<<<<< HEAD
 mongoose
   .connect(process.env.MONGODB_URL) // use .env file
   .then((success) => console.log('Connect Successfully to MongoDB haha'))
   .catch((err) => console.log(err.message))
+=======
+
+>>>>>> 232cdf4552039c6f217466ca8a29548d72300205
 
 app.use(express.urlencoded({ extended: false }))
 app.use(bodyParser.json({ limit: '50mb' }))
