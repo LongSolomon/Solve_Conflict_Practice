@@ -12,8 +12,10 @@ const deviceRepo = {
 
   //GET A DEVICE haha
   finditbyIDrepo: async (id) => {
-    const device = await Device.findById(id) // find a device
-    return device
+    const device1 = await Device.findById(id) // find a device
+
+    return device1
+
   },
 
   getalldevicesrepo: async (id) => {
@@ -37,7 +39,8 @@ const deviceRepo = {
     })
     const username = 'amopdz';
     if (device.type == 0) {
-      feedKey = 'led';
+
+      feedKey2 = 'led';
       if (newStatus) { data = '1' }
       else { data = '0' }
       apiUrl = `https://io.adafruit.com/api/v2/${username}/feeds/${feedKey}/data`;
@@ -94,8 +97,9 @@ const deviceRepo = {
   },
 
   changeautomode: async (req) => {
-    const device = await Device.findById(req.params.id);
-    const newmode = !device.automode;
+
+    const device3 = await Device.findById(req.params.id);
+    const newmode = !device3.automode;
     await device.updateOne({
       $set: {
         automode: newmode
