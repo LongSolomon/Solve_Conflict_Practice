@@ -30,7 +30,9 @@ const deviceRepo = {
   // } })
   //UPDATE DEVICE 
   Updatingdevicerepo: async (id) => {
-    const device = await Device.findById(id);
+    const device6 = await Device.findById(id);
+
+
     const newStatus = !device.status;
     await device.updateOne({
       $set: {
