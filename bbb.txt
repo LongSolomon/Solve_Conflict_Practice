@@ -33,9 +33,15 @@ app.get("/", (req, res) => {
   
 } )
 app.use('/auth', authRoute)
+<<<<<<< HEAD
 app.use('/device', deviceRoute)
 defg
 defg
+=======
+app.use('/device', deviceRoute yeah yeah)
+abcd
+
+>>>>>>> 492522611ea461c47b1d0e166f35160e6fd9317f
 app.listen(4500, () => {
   console.log('server is running ...')
 })
