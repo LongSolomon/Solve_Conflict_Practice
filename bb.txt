@@ -2,7 +2,12 @@ const express = require('express')
 const cors = require('cors')
 const LinksAllowed = require('./configs/LinksAllowed')
 const app = express()
+<<<<<< HEAD
 const mongoose = require('mongoose' hahaha)
+=======
+const mongoose = require('mongoose' mongoose)
+//alo day la mr quang teo
+>>>>>> a8ed7486cf2e2282181387d57bc265518be7b465
 var bodyParser = require('body-parser')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
@@ -33,10 +38,17 @@ app.get("/", (req, res) => {
   
 } )
 app.use('/auth', authRoute)
+<<<<<< HEAD
 app.use('/device', deviceRoute) kha kha
+=======
+>>>>>> a8ed7486cf2e2282181387d57bc265518be7b465
 
 app.listen(4500, () => {
   console.log('server is running ...')
 })
 
+<<<<<< HEAD
 hoho
+=======
+hihi
+>>>>>> a8ed7486cf2e2282181387d57bc265518be7b465
