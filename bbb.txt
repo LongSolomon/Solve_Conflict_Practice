@@ -10,7 +10,7 @@ const authRoute = require('./routes/authRoute')
 const deviceRoute = require('./routes/deviceRoute')
 
 dotenv.config() // do for .env file
-//CONNECT DATABASE
+
 mongoose
   .connect(process.env.MONGODB_URL) // use .env file
   .then((success) => console.log('Connect Successfully to MongoDB'))
@@ -34,7 +34,8 @@ app.get("/", (req, res) => {
 } )
 app.use('/auth', authRoute)
 app.use('/device', deviceRoute)
-
+defg
+defg
 app.listen(4500, () => {
   console.log('server is running ...')
 })
