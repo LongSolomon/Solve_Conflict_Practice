@@ -34,6 +34,8 @@ app.get("/", (req, res) => {
 } )
 app.use('/auth', authRoute)
 app.use('/device', deviceRoute)
+qwerty
+qwerty
 
 app.listen(4500, () => {
   console.log('server is running ...')
