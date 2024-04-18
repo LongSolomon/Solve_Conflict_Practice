@@ -37,6 +37,36 @@ const deviceRepo = {
     return device
   },
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   getalldevicesrepo: async (id) => {
     const alldevices = await Device.find({
       ownerID: id,
