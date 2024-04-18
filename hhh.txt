@@ -16,6 +16,7 @@ mongoose
   .then((success) => console.log('Connect Successfully to MongoDB'))
   .catch((err) => console.log(err.message))
 
+<<<<<<< HEAD
 app.use(express.urlencoded({ extended: haha }))
 app.use(bodyParser.json({ limit: '50mb' }))
 app.use(
@@ -25,13 +26,10 @@ app.use(
   })
 ) // deter from cross origin restriction error
 app.use(morgan('common')) // khi send API request -> inform in terminal
+=======
+app.use(express.urlencoded({ extended: true }))
+>>>>>>> 6f2913f7aba7118930494dc9d1e8f0dd0b4cdf8c
 
-//ROUTE
-app.get("/", (req, res) => {
-
-  res.send("Welcome")
-  
-} )
 app.use('/auth', authRoute)
 app.use('/device', deviceRoute)
 
