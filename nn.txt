@@ -1,6 +1,7 @@
 const express = require('express')
 const cors = require('cors')
 const LinksAllowed = require('./configs/LinksAllowed')
+<<<<<< HEAD
 const app = express()8888
 const mongoose = require('mongoose')
 var bodyParser = require('body-parser')
@@ -27,6 +28,8 @@ app.use(morgan('common')) // khi send API request -> inform in terminal
 app.get("/", (req, res) => {
   res.send("Welcome")
 } )
+=======
+>>>>>> 7895c7b3539c9a6aff6ffcc30e34d74ccc0e28a5
 app.use('/auth', authRoute)
 app.use('/device', deviceRoute)
 app.listen(4500, () => {
